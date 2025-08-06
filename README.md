@@ -16,6 +16,62 @@ This will create a new folder structure for your Django project, including the n
 
 ---
 
+Sure! Here's the updated section with the command to **run the Django development server**, including how to **choose a custom port**, explained in a beginner-friendly way for your `README.md`.
+
+---
+
+## 🚀 Running the Django Development Server
+
+Once you’ve created your Django project and set it up, you can start the development server using the following command:
+
+```bash
+python manage.py runserver
+```
+
+By default, this runs the server at:
+
+```
+http://127.0.0.1:8000/
+```
+
+---
+
+### 🌐 Choosing a Custom Port
+
+If port `8000` is already in use or you prefer to use another port (e.g., `5000`, `8080`, etc.), you can specify it like this:
+
+```bash
+python manage.py runserver 5000
+```
+
+This will run your server at:
+
+```
+http://127.0.0.1:5000/
+```
+
+You can even specify a different IP and port (useful for testing on local networks):
+
+```bash
+python manage.py runserver 0.0.0.0:8000
+```
+
+This makes your server accessible to **other devices on the same network** (e.g., mobile or another PC).
+
+---
+
+### ✅ Summary
+
+| Command                                   | Description                             |
+| ----------------------------------------- | --------------------------------------- |
+| `python manage.py runserver`              | Start server on default port `8000`     |
+| `python manage.py runserver 5000`         | Start server on custom port `5000`      |
+| `python manage.py runserver 0.0.0.0:8000` | Make server accessible on local network |
+
+> ⚠️ **Note:** The development server is only for development and testing. For production, use a proper web server like **Gunicorn** or **Daphne** with **WSGI** or **ASGI**.
+
+---
+
 ## ⚙️ Django Server Interfaces: WSGI vs ASGI
 
 Django supports two types of server interfaces:
