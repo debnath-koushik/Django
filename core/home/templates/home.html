@@ -18,5 +18,35 @@
     </nav> -->
     <h1>Welcome to the Home Page</h1>
     <p>This is the main landing page of our simple website.</p>
+
+    <p>Random number: {{ rand_num }}</p>
+    <hr>
+    <p>List of vegetables</p>
+    <ol>
+        {% for vegetable in vegetables %}
+            <li>{{ vegetable }}</li>
+        {% endfor %}
+    </ol>
+    <hr>
+    {% if rand_num > 18 %}
+        <p>The {{rand_num}} is greater than 18.</p>
+    {% else %}
+        <p>The {{rand_num}} is less than or equal to 18.</p>
+    {% endif %}
+    <hr>
+    <table border="1">
+        <tr>
+            <th>Sl No.</th>
+            <th>City</th>
+            <th>Population</th>
+        </tr>
+        {% for city in cities %}
+            <tr>
+                <td>{{ forloop.counter }}</td>
+                <td>{{ city.name }}</td>
+                <td>{{ city.population }}</td>
+            </tr>
+        {% endfor %}
+    </table>
 </body>
 </html>
